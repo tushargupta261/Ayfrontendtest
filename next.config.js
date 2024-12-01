@@ -1,6 +1,14 @@
-const withPWA = require('next-pwa')({
-  dest: 'public'
-})
+// const withPWA = require('next-pwa')({
+//   //dest: 'public'
+// })
+const withPWA = require('next-pwa');
+
+module.exports = withPWA({
+  pwa: {
+    dest: 'public', // Specify where the service worker file should go
+  },
+  reactStrictMode: true,
+});
 const runtimeCaching = require('next-pwa/cache')
 
 module.exports = withPWA({
